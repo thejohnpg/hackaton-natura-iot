@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputForm input {
+  padding: 8px 12px;
+  margin: 8px 0;
+  line-height: 30px;
+  border-radius: 12px;
+  border: 1px solid #878787;
+  outline: none;
+  box-sizing: border-box;
+  color: #878787;
+}
+
+.inputForm input::placeholder {
+  opacity: 0.5;
+}
+
+
+
+.inputButton {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 8px 0;
+  line-height: 30px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+button.buttonLogin{
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+button.buttonSignup{
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+
