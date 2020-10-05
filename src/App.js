@@ -2,8 +2,7 @@ import React from 'react';
 
 import './App.css';
 
-import AllunaLogo from './assets/alluna.png';
-import NaturaLogo from './assets/natura.png';
+import Logo from './assets/logo.png';
 
 
 import { Link, BrowserRouter, Router } from 'react-router-dom';
@@ -14,8 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <img src={NaturaLogo} alt="logo-natura" className="imgLogo" />
-        <img src={AllunaLogo} alt="logo-aluna" className="imgLogo" />
+        <img src={Logo} alt="logo-natura" className="imgLogo" />
       </div>
 
       <BrowserRouter>

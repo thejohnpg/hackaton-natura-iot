@@ -1,3 +1,8 @@
+.App {
+  height: 100vh;
+  background: var(--primary-color);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -26,8 +31,6 @@
   opacity: 0.5;
 }
 
-
-
 .inputButton {
   display: flex;
   flex-direction: column;
@@ -47,12 +50,12 @@ button {
 }
 
 button.buttonLogin{
-  background-color: var(--primary-color);
+  background-color: var(--button-color);
   color: #fff;
 }
 
 button.buttonSignup{
-  background-color: var(--primary-color);
+  background-color: var(--button-color);
   color: #fff;
 }
 

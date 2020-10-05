@@ -1,3 +1,11 @@
+.appInfo {
+  height: 100vh;
+  background: #fff;
+}
+
+div > h2 {
+  padding: 16px 0;
+}
 
 .containerInfoPerfume {
   display: flex;
@@ -8,7 +16,8 @@
 
 .infoPerfumePercent {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   width: 75vw;
   background-color: var(--primary-color);
   color: #fff;
@@ -20,5 +29,9 @@
   outline: none;
   box-sizing: border-box;
   cursor: pointer;
+}
 
+.activateLed {
+  display: flex;
+  padding: 4px;
 }

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import { Doughnut } from 'react-chartjs-2';
 
+import { CgSmartHomeLight } from "react-icons/cg";
+
 import './index.css';
 
 
@@ -15,7 +17,7 @@ export default function Login() {
 
   const chart = () => {
     setData({
-      labels: ["perfume1", "perfume2", "perfume3", "Perfume4", "Perfume5"],
+      labels: ["floratta", "deoparfumintenso", "deoparfumllia", "meuprimeirohumor", "kriska"],
       datasets: [
         {
           data: [12, 89, 75, 99, 25],
@@ -23,7 +25,8 @@ export default function Login() {
             '#FF6384',
             '#36A2EB',
             '#FFCE56',
-            '#7522f4'
+            '#7522f4',
+            '#3222f4',
           ],
           borderWidth: 4
         }
@@ -35,9 +38,34 @@ export default function Login() {
     chart()
   }, [])
 
+  async function handleChangeParfum(dataChange) {
+
+    const infoFragance = dataChange;
+    console.log(infoFragance)
+
+    fetch("https://portal.stg.eugenio.io/api/v1/things/529a226c-f80f-4c26-8175-46f8e3c37ff8/invoke", {
+      method: "POST",
+      headers: {
+        "X-Tenant": "tenant1600801826487",
+        "apikey": "KmHpnCrNo5FM4NF71J2RLCTnLI04Kcrp",
+        "Content-Type": "application/json",
+        // "deviceId": "529a226c-f80f-4c26-8175-46f8e3c37ff8",
+      },
+      body: JSON.stringify ({
+        "method": "change_parfum",
+        "payload": `${infoFragance}`,
+      }),
+    })
+      .then(response => {
+        console.log(response)
+      })
+  }
+
+
+
   return (
-    <div>
-      <h1>Informações de Uso</h1>
+    <div className="appInfo">
+      <h2>Informações de Uso</h2>
 
       <Doughnut data={data} options={
         { responsive: true }
@@ -45,24 +73,39 @@ export default function Login() {
 
       <div className="containerInfoPerfume">
         <div className="infoPerfumePercent">
-          <span>Perfume 1</span>
+          <span>Floratta</span>
           <span>{perfume1}%</span>
+          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[0]}`)}>
+            <CgSmartHomeLight size={24} />
+          </div>
         </div>
         <div className="infoPerfumePercent">
-          <span>Perfume 2</span>
+          <span>Deoparfumintenso</span>
           <span>{perfume2}%</span>
+          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[1]}`)}>
+            <CgSmartHomeLight size={24} />
+          </div>
         </div>
         <div className="infoPerfumePercent">
-          <span>Perfume 3</span>
+          <span>Deoparfumllia</span>
           <span>{perfume3}%</span>
+          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[2]}`)}>
+            <CgSmartHomeLight size={24} />
+          </div>
         </div>
         <div className="infoPerfumePercent">
-          <span>Perfume 4</span>
+          <span>Humor</span>
           <span>{perfume4}%</span>
+          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[3]}`)}>
+            <CgSmartHomeLight size={24} />
+          </div>
         </div>
         <div className="infoPerfumePercent">
-          <span>Perfume 5</span>
+          <span>Kriska</span>
           <span>{perfume5}%</span>
+          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[4]}`)}>
+            <CgSmartHomeLight size={24} />
+          </div>
         </div>
       </div>
     </div>

@@ -13,5 +13,12 @@ code {
 }
 
 :root {
-  --primary-color: #EA581C;
+  --primary-color: #EA591C;
+  --button-color: #1EACB7;
+
+  --perfume-color-1: #FF6384;
+  --perfume-color-2: #36A2EB;
+  --perfume-color-3: #FFCE56;
+  --perfume-color-4: #7522f4;
+  --perfume-color-5: #3222f4;
 }
