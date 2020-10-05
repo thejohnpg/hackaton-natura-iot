@@ -18,11 +18,27 @@
 
 .infoProfile {
   display: flex;
-  justify-content: start;
   padding-left: 16px ;
 }
 
 .infoPlan {
   background-color: #fff;
   color: #000;
+}
+
+.divLogout {
+  display: flex;
+  align-items: center;
+}
+
+.buttonLogout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.divLogout a { 
+  text-decoration: none;
+  outline: none;
 }

@@ -1,6 +1,12 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import imgPerfil from './../../assets/profile.png';
+
+import { CgLogOut } from "react-icons/cg";
+
+import Footer from './../Footer';
 
 import './index.css';
 
@@ -21,10 +27,16 @@ export default function App() {
           </div>
           <div className="infoPerfumePercent infoProfile">
             <span>Consumo</span>
+            <span>--</span>
           </div>
         </div>
-        <div className=""></div>
+        <div className="divLogout">
+          <Link to="/">
+            <button className="buttonLogout"><CgLogOut size={20} /> Sair </button>
+          </Link>
+        </div>
       </div>
+      <Footer />
     </div>
 
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import './index.css';
 
 import cpfMask from "./Mask";
@@ -27,6 +29,9 @@ export default function Login() {
       <div className="inputButton">
         <button className="buttonLogin"> Cadastrar </button>
       </div>
+      <Link to="/">
+          <button className="buttonSignup backToLogin"> Voltar </button>
+        </Link>
     </form>
 
   )

@@ -29,9 +29,31 @@ div > h2 {
   outline: none;
   box-sizing: border-box;
   cursor: pointer;
+  outline: none;
+  user-select: none;
 }
 
 .activateLed {
   display: flex;
   padding: 4px;
+}
+
+.floratta {
+    box-shadow: 0px 0px 15px 10px var(--perfume-color-1);
+}
+
+.deoparfumintenso {
+    box-shadow: 0px 0px 15px 10px var(--perfume-color-2);
+}
+
+.deoparfumllia {
+  box-shadow: 0px 0px 15px 10px var(--perfume-color-3);
+}
+
+.meuprimeirohumor {
+  box-shadow: 0px 0px 15px 10px var(--perfume-color-4);
+}
+
+.kriska {
+  box-shadow: 0px 0px 15px 10px var(--perfume-color-5);
 }

@@ -11,14 +11,16 @@ export default function Login() {
         <div className="form">
           <div className="inputForm">
             <input type="text" className="inputLogin" placeholder="digite seu email" />
-            <input type="text" className="inputPass" placeholder="senha" />
+            <input type="password" className="inputPass" placeholder="senha" />
           </div>
         </div>
         <div className="inputButton">
         </div>
       </form>
       <div className="inputButton">
-        <button className="buttonLogin"> Login </button>
+        <Link to="/info">
+          <button className="buttonLogin btnLogin"> Login </button>
+        </Link>
 
         <Link to="/cadastro">
           <button className="buttonSignup"> Novo por Aqui? Cadastre-se </button>

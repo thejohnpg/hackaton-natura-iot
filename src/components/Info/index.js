@@ -4,10 +4,16 @@ import { Doughnut } from 'react-chartjs-2';
 
 import { CgSmartHomeLight } from "react-icons/cg";
 
+import Footer from './../Footer';
+
 import './index.css';
 
 
 export default function Login() {
+
+  const [ ledActive, setLedActive ] = useState("");
+
+
   const [data, setData] = useState({});
   const [perfume1, setPerfume1] = useState(12);
   const [perfume2, setPerfume2] = useState(89);
@@ -40,8 +46,14 @@ export default function Login() {
 
   async function handleChangeParfum(dataChange) {
 
+    if (ledActive == dataChange) {
+      setLedActive("");
+    }
+    else {
+      setLedActive(dataChange);
+    }
+
     const infoFragance = dataChange;
-    console.log(infoFragance)
 
     fetch("https://portal.stg.eugenio.io/api/v1/things/529a226c-f80f-4c26-8175-46f8e3c37ff8/invoke", {
       method: "POST",
@@ -51,17 +63,15 @@ export default function Login() {
         "Content-Type": "application/json",
         // "deviceId": "529a226c-f80f-4c26-8175-46f8e3c37ff8",
       },
-      body: JSON.stringify ({
+      body: JSON.stringify({
         "method": "change_parfum",
         "payload": `${infoFragance}`,
       }),
     })
       .then(response => {
-        console.log(response)
+        console.log(ledActive);
       })
   }
-
-
 
   return (
     <div className="appInfo">
@@ -75,40 +85,41 @@ export default function Login() {
         <div className="infoPerfumePercent">
           <span>Floratta</span>
           <span>{perfume1}%</span>
-          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[0]}`)}>
+          <div className={`activateLed ${ledActive == "floratta" ? ledActive : ""}`} onClick={() => handleChangeParfum(`${data.labels[0]}`)}>
             <CgSmartHomeLight size={24} />
           </div>
         </div>
         <div className="infoPerfumePercent">
           <span>Deoparfumintenso</span>
           <span>{perfume2}%</span>
-          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[1]}`)}>
+          <div className={`activateLed ${ledActive == "deoparfumintenso" ? ledActive : ""}`} onClick={() => handleChangeParfum(`${data.labels[1]}`)}>
             <CgSmartHomeLight size={24} />
           </div>
         </div>
         <div className="infoPerfumePercent">
           <span>Deoparfumllia</span>
           <span>{perfume3}%</span>
-          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[2]}`)}>
+          <div className={`activateLed ${ledActive == "deoparfumllia" ? ledActive : ""}`} onClick={() => handleChangeParfum(`${data.labels[2]}`)}>
             <CgSmartHomeLight size={24} />
           </div>
         </div>
         <div className="infoPerfumePercent">
           <span>Humor</span>
           <span>{perfume4}%</span>
-          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[3]}`)}>
+          <div className={`activateLed ${ledActive == "meuprimeirohumor" ? ledActive : ""}`} onClick={() => handleChangeParfum(`${data.labels[3]}`)}>
             <CgSmartHomeLight size={24} />
           </div>
         </div>
         <div className="infoPerfumePercent">
           <span>Kriska</span>
           <span>{perfume5}%</span>
-          <div className="activateLed" onClick={() => handleChangeParfum(`${data.labels[4]}`)}>
+          <div className={`activateLed ${ledActive == "kriska" ? ledActive : ""}`} onClick={() => handleChangeParfum(`${data.labels[4]}`)}>
             <CgSmartHomeLight size={24} />
           </div>
         </div>
+        
       </div>
+      <Footer />
     </div>
-
   )
 }
