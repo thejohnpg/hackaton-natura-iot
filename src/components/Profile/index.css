@@ -1,0 +1,22 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgProfile > img {
+  width: 120px;
+  border-radius: 50%;
+}
+
+.infoProfile {
+  display: flex;
+  justify-content: start;
+  padding-left: 16px ;
+}
+
+.infoPlan {
+  background-color: #fff;
+  color: #000;
+}
