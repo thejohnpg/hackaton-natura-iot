@@ -27,7 +27,9 @@ export default function Login() {
         </div>
       </div>
       <div className="inputButton">
-        <button className="buttonLogin"> Cadastrar </button>
+      <Link to="/">
+        <button className="buttonLogin btnsignUp"> Cadastrar </button>
+      </Link>
       </div>
       <Link to="/">
           <button className="buttonSignup backToLogin"> Voltar </button>
