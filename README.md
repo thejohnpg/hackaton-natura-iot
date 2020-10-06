@@ -1,68 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hackaton Natura Eugenio IOT
 
-## Available Scripts
+![enter image description here](https://i.ibb.co/QMH60zd/i-Phone-Xs-mockup.png)
 
-In the project directory, you can run:
+Bom, esse foi o WebApp criado para atender as necessidades da Natura junto a plataforma Eugenio IOT, foi criado uma solução em várias etapas, sendo o webapp responsável por administrar os planos, informações de uso e interagir com o Device, que no nosso caso é um colar que contém um led, dentro do nosso planejamento ele interage entre o led, a cor referente a fragancia e o frontend que é conectado com a plataforma.
 
-### `yarn start`
+Aqui tem um video Demo do device conectado 
+https://www.youtube.com/watch?v=lGIf7zrfZWE&feature=youtu.be
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![enter image description here](https://i.ibb.co/7j0BY8w/Macbook-i-Pad-Mockup.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+O Webapp foi construido em React, interagindo com Arduino e com dados mockados, o foco foi a funcionalidade da interação e nao as funções de login e cadastro por exemplo que podem ser feitos de maneira mais eficiente com um pouco mais de tempo.
 
-### `yarn test`
+![enter image description here](https://i.ibb.co/rt1sxfm/Simple-Mockup.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Para rodar o projeto basta fazer o download, entrar na pasta raiz, digitar ```yarn``` para instalar as dependencias e ```yarn start``` para iniciar o projeto.
+Você vai precisar da apikey, X-Tenant e device_id que são cedidas pela plataforma da [Eugenio](https://eugenio.io/).
