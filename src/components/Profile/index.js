@@ -17,28 +17,32 @@ export default function App() {
         <div className="imgProfile">
           <img src={imgPerfil} alt="" className="imgPersonalProfile" />
         </div>
+
         <div className="infoPlan">
           <div className="infoPerfumePercent infoProfile">
             <span>Sua Assinatura</span>
           </div>
+          
           <div className="infoPerfumePercent infoPlan">
             <span>Plano 2</span>
             <span>R$ 79,90</span>
           </div>
+
           <div className="infoPerfumePercent infoProfile">
             <span>Consumo</span>
             <span>--</span>
           </div>
         </div>
+        
         <div className="divLogout">
           <Link to="/">
             <button className="buttonLogout"><CgLogOut size={20} /> Sair </button>
           </Link>
         </div>
       </div>
+
       <Footer />
+
     </div>
-
-
   )
 }

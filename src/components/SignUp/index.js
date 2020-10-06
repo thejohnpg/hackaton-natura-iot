@@ -8,7 +8,7 @@ import cpfMask from "./Mask";
 
 export default function Login() {
 
-  const [ inputCPF, setInputCPF] = useState()
+  const [inputCPF, setInputCPF] = useState()
 
   function handleChange(event) {
     event.preventDefault();
@@ -27,13 +27,13 @@ export default function Login() {
         </div>
       </div>
       <div className="inputButton">
-      <Link to="/">
-        <button className="buttonLogin btnsignUp"> Cadastrar </button>
-      </Link>
+        <Link to="/">
+          <button className="buttonLogin btnsignUp"> Cadastrar </button>
+        </Link>
       </div>
       <Link to="/">
-          <button className="buttonSignup backToLogin"> Voltar </button>
-        </Link>
+        <button className="buttonSignup backToLogin"> Voltar </button>
+      </Link>
     </form>
 
   )

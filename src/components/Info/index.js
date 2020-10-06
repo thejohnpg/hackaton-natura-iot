@@ -11,8 +11,7 @@ import './index.css';
 
 export default function Login() {
 
-  const [ ledActive, setLedActive ] = useState("");
-
+  const [ledActive, setLedActive] = useState("");
 
   const [data, setData] = useState({});
   const [perfume1, setPerfume1] = useState(12);
@@ -44,7 +43,7 @@ export default function Login() {
     chart()
   }, [])
 
-  async function handleChangeParfum(dataChange) {
+  function handleChangeParfum(dataChange) {
 
     if (ledActive == dataChange) {
       setLedActive("");
@@ -58,8 +57,8 @@ export default function Login() {
     fetch("https://portal.stg.eugenio.io/api/v1/things/529a226c-f80f-4c26-8175-46f8e3c37ff8/invoke", {
       method: "POST",
       headers: {
-        "X-Tenant": "tenant1600801826487",
-        "apikey": "KmHpnCrNo5FM4NF71J2RLCTnLI04Kcrp",
+        "X-Tenant": process.env.REACT_APP_X_TENANT,
+        "apikey": process.env.REACT_APP_API_KEY,
         "Content-Type": "application/json",
         // "deviceId": "529a226c-f80f-4c26-8175-46f8e3c37ff8",
       },
@@ -117,7 +116,7 @@ export default function Login() {
             <CgSmartHomeLight size={24} />
           </div>
         </div>
-        
+
       </div>
       <Footer />
     </div>
